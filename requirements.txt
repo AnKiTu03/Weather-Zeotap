@@ -8,7 +8,6 @@ streamlit_autorefresh
 plotly
 streamlit
 datetime
-time
 yagmail
 google-generativeai
 schedule
