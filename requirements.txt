@@ -6,8 +6,6 @@ streamlit-extras
 streamlit_shadcn_ui
 streamlit_autorefresh
 plotly
-os
-sys
 streamlit
 datetime
 time
