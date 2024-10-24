@@ -2,7 +2,7 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from datetime import datetime, timedelta
 
-cred = credentials.Certificate('/home/Zeotap/main/config/zeotap-dddc1-firebase-adminsdk-hvf95-0a5785de5c.json')
+cred = credentials.Certificate('config/zeotap-dddc1-firebase-adminsdk-hvf95-0a5785de5c.json')
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
