@@ -75,9 +75,9 @@ if weather_data:
         st.markdown("<h3 style='text-align: center;'>📊 Current Weather Metrics</h3>", unsafe_allow_html=True)
         cols = st.columns(2)
         with cols[0]:
-            ui.card(title="Current Weather", content=f"{temp:.2f}{temp_symbol}", key="card1").render()
+            ui.card(title="🌦️ Current Weather", content=f"{temp:.2f}{temp_symbol}", key="card1").render()
         with cols[1]:
-            ui.card(title="Feels Like", content=f"{feels_like:.2f}{temp_symbol}", key="card2").render()
+            ui.card(title="🌡 Feels Like", content=f"{feels_like:.2f}{temp_symbol}", key="card2").render()
 
 
         with st.spinner("🔍 Generating weather summary..."):
@@ -89,23 +89,16 @@ if weather_data:
                 st.error(f"Failed to generate weather summary: {e}")
 
         st.markdown("<h3 style='text-align: center;'>📈 Temperature Statistics</h3>", unsafe_allow_html=True)
-        cols = st.columns(3)
-        with cols[0]:
-            st.metric("🌡️ Avg Temp", f"{avg_temp:.2f}{temp_symbol}")
-        with cols[1]:
-            st.metric("🌡️ Max Temp", f"{max_temp:.2f}{temp_symbol}")
-        with cols[2]:
-            st.metric("🌡️ Min Temp", f"{min_temp:.2f}{temp_symbol}")
 
         cols = st.columns(4)
         with cols[0]:
-            ui.card(title="Avg", content=f"{avg_temp:.2f}{temp_symbol}", key="card3").render()
+            ui.card(title="📈 Avg Temp", content=f"{avg_temp:.2f}{temp_symbol}", key="card3").render()
         with cols[1]:
-            ui.card(title="Max", content=f"{max_temp:.2f}{temp_symbol}", key="card4").render()
+            ui.card(title="🌡️ Max Temp", content=f"{max_temp:.2f}{temp_symbol}", key="card4").render()
         with cols[2]:
-            ui.card(title="Min", content=f"{min_temp:.2f}{temp_symbol}", key="card5").render()
+            ui.card(title="❄️ Min Temp", content=f"{min_temp:.2f}{temp_symbol}", key="card5").render()
         with cols[3]:
-            ui.card(title="Condition", content=dominant_weather_condition, key="card6").render()
+            ui.card(title="🌥️ Condition", content=dominant_weather_condition, key="card6").render()
         
         st.markdown("<h3 style='text-align: center;'>📅 Temperature Changes Over Time</h3>", unsafe_allow_html=True)
 
